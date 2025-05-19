@@ -1,11 +1,13 @@
 'use strict';
 
 const express = require('express');
-const app = express();
 
+// Constants
 const PORT = 3000;
 const HOST = '0.0.0.0';
 
+// App
+const app = express();
 app.get('/', (req, res) => {
   res.send('Hello World');
 });
