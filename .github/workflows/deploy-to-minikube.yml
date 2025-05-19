@@ -28,11 +28,6 @@ jobs:
     - name: Check pod status
       run: kubectl get pods -o wide
 
-    - name: Get pod logs
-      run: |
-        POD_NAME=$(kubectl get pod -l app=nodejs-app -o jsonpath="{.items[0].metadata.name}")
-        kubectl logs $POD_NAME
-      
     - name: Verify deployment
       run: |
         kubectl get pods
